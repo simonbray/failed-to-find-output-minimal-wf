@@ -1,0 +1,26 @@
+- doc: Test outline for minimal.ga
+  job:
+    collection_size: 2
+    inp1:
+      class: File
+      path: "inp.gro"
+    inp2:
+      class: File
+      path: "inp.top"
+    ndx:
+      class: File
+      path: "inp.ndx"
+    mdp:
+      class: File
+      path: "inp.mdp"
+  outputs:
+    Free energy data:
+      class: 'File'
+      assert:
+        has_n_lines: 101
+        has_n_columns: 5
+    Friction data:
+      class: 'File'
+      assert:
+        has_n_lines: 101
+        has_n_columns: 5
